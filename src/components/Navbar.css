@@ -1,0 +1,40 @@
+.navbar-inner-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.menu-bar {
+    background-color: transparent;
+}
+
+.menu-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    height: 8rem;
+}
+
+.menu-bar ul li {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5rem;
+
+}
+
+.menu-bar ul li a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.menu-bar ul li a:hover {
+    background-color: rgb(74, 248, 236);
+    border-radius: 5px;
+
+}

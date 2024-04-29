@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+nav {
+  @apply flex h-60  items-start justify-center rounded-b-[2em] bg-neutral-lightTheme-veryPaleBlue p-6 dark:bg-neutral-darkTheme-veryDarkBlueBgTop md:p-0 md:pt-10;
+}
+
+h1 {
+  @apply text-2xl font-bold text-neutral-lightTheme-veryDarkBlue dark:text-neutral-darkTheme-white;
+}
+
+.total-followers {
+  @apply text-sm font-bold text-neutral-lightTheme-darkGrayishBlue dark:text-neutral-darkTheme-desaturatedBlue;
+}
+
+.darkmode-wrapper {
+  @apply mt-5 flex justify-between gap-2 text-neutral-lightTheme-darkGrayishBlue dark:text-neutral-darkTheme-desaturatedBlue;
+}
+
+.navbar-inner-wrapper {
+  @apply container mx-auto flex flex-col justify-between md:flex-row;
+}
+
+.stats-wrapper {
+  @apply grid grid-cols-1 gap-6 px-5 md:grid-cols-2 md:px-0 lg:grid-cols-4;
+}
+
+.single-main-stat-container {
+  @apply h-56 cursor-pointer rounded-lg bg-neutral-lightTheme-lightGrayishBlue duration-200 hover:bg-slate-200 dark:bg-neutral-darkTheme-darkDesaturatedBlue dark:hover:bg-slate-600;
+}
+
+.single-today-stat-container {
+  @apply flex h-44 cursor-pointer items-center justify-between rounded-lg bg-neutral-lightTheme-lightGrayishBlue p-6 duration-200 hover:bg-slate-200 dark:bg-neutral-darkTheme-darkDesaturatedBlue dark:hover:bg-neutral-lightTheme-darkGrayishBlue;
+}
+
+.user-name {
+  @apply text-sm text-neutral-darkTheme-darkDesaturatedBlue dark:text-neutral-lightTheme-lightGrayishBlue;
+}
+
+.followers-count {
+  @apply text-6xl font-bold text-neutral-lightTheme-veryDarkBlue dark:text-neutral-lightTheme-lightGrayishBlue;
+}
+
+.followers-name {
+  @apply text-lg uppercase tracking-widest text-neutral-lightTheme-darkGrayishBlue dark:text-neutral-darkTheme-desaturatedBlue;
+}
+
+.line {
+  @apply mt-6 block h-[1px] bg-neutral-darkTheme-darkDesaturatedBlue dark:bg-neutral-darkTheme-desaturatedBlue md:hidden;
+}
+
+/* Toggle Button Styling */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 27px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(62, 218, 130, 1) 0%,
+    rgba(10, 51, 227, 1) 100%
+  );
+  border-radius: 34px;
+  -webkit-transition: 0.4s;
+  transition: all 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  border-radius: 50%;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background: linear-gradient(
+    90deg,
+    rgba(10, 51, 227, 1) 0%,
+    rgba(62, 218, 130, 1) 100%
+  );
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  transform: translateX(30px);
+}
